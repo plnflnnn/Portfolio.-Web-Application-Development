@@ -1,0 +1,73 @@
+.filter
+    margin-top: 60px
+
+.seach_and_filter
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+.search_section
+    display: flex
+    align-items: center
+
+.looking_for
+    margin-right: 20px
+    color: #000
+    font-size: 14px
+    font-weight: 400
+
+.search
+    border-radius: 4px
+    width: 180px
+    height: 30px
+    background: #FFF
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25)
+    text-align: center
+    font-size: 12px
+    font-weight: 400
+    border: 0px
+
+.filter_section
+    display: flex
+    align-items: center
+
+.or_filter
+    margin-right: 35px
+    font-size: 14px
+
+.filter_buttons
+    display: flex
+    align-items: center
+
+.filter_button
+    margin-right: 5px
+    border-radius: 4px
+    min-width: 75px
+    color: #000
+    text-align: center
+    font-size: 12px
+    font-weight: 400
+    height: 30px
+    border: none
+    background: #FFF
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25)
+
+.filter_button.active
+    background: rgba(0, 0, 0, 0.25)
+
+@media ( max-width: 768px)
+    .seach_and_filter
+        flex-wrap: wrap
+        align-items: flex-start
+        justify-content: space-between
+        padding-left: 50px
+    .filter_section
+        margin-top: 10px
+    .our_coffee__header_title
+        text-align: center
+    
+@media ( max-width: 440px)
+    .filter_buttons
+        flex-wrap: wrap
+    .filter_button
+        margin-top: 5px

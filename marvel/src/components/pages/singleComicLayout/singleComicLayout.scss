@@ -1,0 +1,159 @@
+@import '../../../style/variables.scss';
+
+.single-comic {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 293px 550px auto;
+    column-gap: 50px;
+    align-items: start;
+    &__img {
+        width: 293px;
+        height: 450px;
+    }
+    &__name {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 29px;
+    }
+    &__descr {
+        font-size: 18px;
+        line-height: 24px;
+        margin-top: 25px;
+    }
+    &__price {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 32px;
+        color: $main-color;
+        margin-top: 25px;
+    }
+    &__back {
+        justify-self: end;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 24px;
+        &:hover {
+            color: $main-color;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .single-comic {
+        width: 960px;
+    }
+
+    .single-comic {
+        grid-template-columns: 290px 530px auto;
+        column-gap: 45px;
+    }
+}
+
+@media (max-width: 992px) {
+    .single-comic {
+        width: 720px;
+    }
+
+    .single-comic__img {
+        width: 250px;
+        height: 350px;
+    }
+
+    .single-comic {
+        grid-template-columns: 250px 300px auto;
+        column-gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .single-comic {
+        width: 540px;
+    }
+
+    .single-comic__img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .single-comic__name {
+        font-weight: bold;
+        font-size: 21px;
+        line-height: 22px;
+    }
+
+    .single-comic {
+        margin-top: 40px;
+        grid-template-columns: 200px 250px auto;
+        column-gap: 25px;
+    }
+
+    .single-comic__descr {
+        font-size: 16px;
+        line-height: 22px;
+        margin-top: 20px;
+    }
+
+    .single-comic__price {
+        font-size: 22px;
+    }
+
+    .app__banner-text {
+        font-size: 20px;
+        line-height: 24px;
+        padding-left: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .single-comic {
+        width: 100%;
+    }
+
+    .single-comic__img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .single-comic {
+        margin-top: 30px;
+        grid-template-columns: 150px auto;
+        column-gap: 15px;
+    }
+
+    .single-comic__name {
+        font-size: 19px;
+        line-height: 20px;
+    }
+
+    .single-comic__descr {
+        font-size: 15px;
+        line-height: 20px;
+        margin-top: 15px;
+    }
+
+
+    .single-comic__price {
+        font-size: 22px;
+        line-height: 28px;
+        margin-top: 20px;
+    }
+
+    .second_img {
+        display: none;
+    }
+
+    .app__banner {
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .app__banner-text {
+        font-size: 18px;
+        line-height: 20px;
+        padding-left: 45px;
+        padding-top: 15px;
+    }
+
+    .single-comic__back {
+        display: none;
+    }
+}

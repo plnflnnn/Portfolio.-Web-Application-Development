@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap')
+
+*
+    font-family: 'Merienda', cursive
+
+.container
+    margin: 0 auto
+    max-width: 1140px
+    justify-content: center
+    align-items: center
+    text-align: center
+
+.main
+    background: url('./img/main.png') center (center/cover) no-repeat
+    min-height: 640px
+    &_title
+        color: #FFF
+        text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        font-size: 40px
+        font-weight: 700
+        line-height: normal
+        margin-top: 111px
+    &_subtitle
+        margin-top: 20px
+        margin-bottom: 0px
+        color: #FFF
+        font-size: 24px
+        font-weight: 700
+    &_more
+        display: block
+        width: 120px
+        height: 30px    
+        border-radius: 3px
+        border: 1px solid #FFF
+        background: rgba(196, 196, 196, 0.00)
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+        color: #FFF
+        font-size: 14px
+        font-weight: 700
+        line-height: 32px
+        margin: 0 auto
+        text-decoration: none
+        text-align: center
+        margin-top: 20px
+
+
+.divider_block
+    display: flex
+    margin-top: 20px
+    margin-bottom: 15px
+    justify-content: center
+    align-items: center
+    .divider
+        background: #FFF
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25)
+        width: 60px
+        height: 1px
+    .coffee-beans
+        width: 30px
+        height: 30px
+        margin: 0 25px
+
+.title
+    color: #000
+    font-size: 24px
+    font-weight: 400
+    padding-top: 80px
+
+.about_us
+    min-height: 520px
+    background: #FFF
+    &__description
+        display: block
+        margin: 0 auto
+        max-width: 590px
+        color: #000
+        text-align: center
+        font-family: Merienda
+        font-size: 14px
+        font-weight: 400
+        padding: 20px 25px
+
+.our_best
+    background: url('./img/our_best.png') center (center/cover) no-repeat
+    padding-bottom: 110px
+
+.best_goods
+    margin-top: 40px
+    display: grid
+    grid-template: 240px / repeat(3, 220px)
+    place-content: center
+    column-gap: 70px
+    row-gap: 60px
+    &-item 
+        width: 220px
+        height: 240px
+        border-radius: 8px
+        background: rgba(255, 255, 255, 0.65)
+        justify-content: center
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column 
+        text-decoration: none
+        &_img
+            margin-bottom: 15px
+            img
+                display: block
+                width: 151px
+                height: 130px
+        &_title
+            font-weight: 400
+            margin-bottom: 10px
+            color: #000
+            text-align: center
+            font-size: 14px
+        &_price
+            font-weight: 700
+            color: #000
+            place-self: end
+            font-size: 14px
+            margin-right: 22px
+
+@media ( max-width: 1200px )
+    .nav
+        margin-left: 50px
+    .container
+        max-width: 960px
+
+@media ( max-width: 992px )
+    .container
+        max-width: 720px
+    .best_goods
+        column-gap: 40px
+
+@media ( max-width: 768px )
+    .container
+        max-width: 540px
+    .best_goods
+        grid-template: 240px / 220px
+        
+@media ( max-width: 576px )
+    .container
+        max-width: 100%
+    .main
+        min-height: 600px
+        &_title
+            margin-top: 100px
+            font-size: 35px
+        &_subtitle
+            font-size: 20px
+    .nav_links
+        li
+            margin-right: 20px
+    .footer
+        &_nav_links
+            li
+                margin-right: 20px
+    .about_us
+        min-height: 500px

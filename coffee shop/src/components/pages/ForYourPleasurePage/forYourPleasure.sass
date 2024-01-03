@@ -1,0 +1,40 @@
+.for_your_pleasure__header 
+    background: url('./img/pleasure_main.png') center (center/cover) no-repeat
+    padding-bottom: 85px
+    &_title
+        color: #FFF
+        font-family: Merienda
+        font-size: 40px
+        font-weight: 700
+        margin-top: 60px
+        margin-bottom: 0px
+
+.about_our_goods
+    &__wrapper
+        display: grid
+        grid-template-columns: 272px 346px
+        grid-template-rows: 355px 
+        column-gap: 70px
+        place-content: center
+        margin-top: 70px
+        margin-bottom: 60px
+    &__img
+        width: 272px 
+        height: 355px
+        img
+            display: block
+    &__title
+        color: #000
+        font-size: 24px
+        font-weight: 400
+        padding-top: 10px
+    &__description-text
+        padding-top: 10px
+
+@media ( max-width: 768px)
+    .about_our_goods
+        &__img
+            display: none
+        &__wrapper 
+            grid-template-columns: 346px
+            margin-bottom: 0px

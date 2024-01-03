@@ -1,0 +1,59 @@
+.goods
+    margin-top: 50px
+    display: grid
+    grid-template: 260px / repeat(3, 220px)
+    place-content: center
+    grid-auto-rows: 260px
+    grid-auto-columns: 220px
+    column-gap: 70px
+    row-gap: 60px
+    &-item 
+        width: 220px
+        height: 260px
+        border-radius: 8px
+        background: #FFF
+        justify-content: center
+        align-items: center
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.25) 
+        text-decoration: none
+        &_img
+            margin-bottom: 15px
+            img
+                display: block
+                width: 151px
+                height: 130px
+        &_title
+            font-weight: 400
+            margin-bottom: 15px
+            color: #000
+            text-align: center
+            font-size: 14px
+        &_price
+            font-weight: 700
+            color: #000
+            place-self: end
+            font-size: 14px
+            margin-right: 22px
+        &_country
+            color: #000
+            place-self: end
+            margin: 0px 22px 15px 0px
+            font-size: 14px
+            font-weight: 400
+
+.coffeeGoods-enter
+    opacity: 0
+
+.coffeeGoods-enter-active
+    opacity: 1
+    transition: opacity 300ms ease-in
+
+.coffeeGoods-exit
+    opacity: 1
+
+.coffeeGoods-exit-active
+    opacity: 0
+    transition: opacity 300ms ease-in

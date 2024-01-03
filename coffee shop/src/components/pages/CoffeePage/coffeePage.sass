@@ -1,0 +1,64 @@
+.about_it
+    background: #FFF
+    &_title
+        color: #000
+        font-size: 24px
+        font-weight: 400
+        padding-top: 10px
+    &__wrapper
+        display: grid
+        margin-top: 70px
+        grid-template-columns: 270px 420px
+        grid-template-rows: auto
+        gap: 42px
+        place-content: center
+    &__img
+        object-fit: contain
+        img
+            display: block
+            width: 100%
+    &__description
+        display: grid
+        grid-template: repeat(3, auto) / auto
+        gap: 16px 
+        max-width: 420px
+    &__country, &__description-text, &__price
+        color: #000
+        font-size: 14px
+        font-weight: 400
+        text-align: left
+        span
+            font-weight: 700
+    &__price
+        span
+            font-size: 24px
+            font-weight: 400
+
+@media ( max-width: 768px)
+    .about_it
+        &__description
+            max-width: 350px
+        &__wrapper
+            grid-template-columns: auto 300px
+            gap: 30px
+        &__img
+            img
+                height: 90%
+
+@media ( max-width: 576px)
+    .about_it
+        &__description
+            max-width: 350px
+        &__wrapper
+            grid-template-columns: auto 230px 
+            gap: 15px
+        &__img
+            img
+                height: 90%
+
+@media ( max-width: 400px)
+    .about_it
+        &__img
+            display: none
+        &__wrapper
+            grid-template-columns: 250px
