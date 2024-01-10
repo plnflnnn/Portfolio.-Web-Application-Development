@@ -53,7 +53,7 @@ const CharInfo = (props) => {
 }
 
 const View = ({char}) => {
-    const {name, description, thumbnail, comics} = char;
+    const {id, name, description, thumbnail, comics} = char;
 
     let imgStyle = {'objectFit' : 'cover'};
     if (thumbnail.indexOf('image_not_available')) {
@@ -62,14 +62,12 @@ const View = ({char}) => {
 
     return(
         <>
-        <div className="char__basics">
+        <Link to={`/characters/${id}`} className="char__basics">
             <img  src={thumbnail} alt={name} style={imgStyle}/>
             <div>
                 <div className="char__info-name">{name}</div>
-                <div className="char__btns">
-                </div>
             </div>
-        </div>
+        </Link>
         <div className="char__descr">
             {description}
         </div>
