@@ -1,0 +1,210 @@
+{
+    "vegetables": [
+      {
+        "id": 1,
+        "name": "Cabbage",
+        "price": 3.48,
+        "imgName": "Cabbage",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphoto%2Fgreen-cabbage-isolated-on-white-background-gm624925456-109946393&psig=AOvVaw0Pku_LACuxy-wL1tYMZaXU&ust=1706085265006000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIjFooSN84MDFQAAAAAdAAAAABAI"
+      },
+      {
+        "id": 2,
+        "name": "Potato",
+        "price": 1.24,
+        "imgName": "Potato",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fimages%2Fsearch%2Fpotatoes%2F&psig=AOvVaw1UwJ70LobI6yNdIpUwfmNi&ust=1706085616949000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPDwkqyO84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 3,
+        "name": "Cucumber",
+        "price": 2.03,
+        "imgName": "Cucumber",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.organics.ph%2Fproducts%2Fcucumber&psig=AOvVaw2cYfPEgvuP4Rn4updDFxZL&ust=1706085722081000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMCk0-aO84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 4,
+        "name": "Tomato",
+        "price": 1.85,
+        "imgName": "Tomato",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Ftomato%2F&psig=AOvVaw3s80DemZwjToLuhAVXvHl6&ust=1706085763393000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIComfKO84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 5,
+        "name": "Onion",
+        "price": 3.05,
+        "imgName": "Onion",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.medicalnewstoday.com%2Farticles%2F276714&psig=AOvVaw2jmHOz5-tTsT8hqHqGv666&ust=1706085780031000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNiku_uO84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 6,
+        "name": "Garlic",
+        "price": 0.66,
+        "imgName": "Garlic",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.health.com%2Fgarlic-8356294&psig=AOvVaw117Abz8Qg6EhFpEbiSgMCb&ust=1706085799867000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPCI_YOP84MDFQAAAAAdAAAAABAD"
+      }
+    ],
+    "fruits": [
+      {
+        "id": 1,
+        "name": "Apple",
+        "price": 1.29,
+        "imgName": "Apple",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fparade.com%2F1330308%2Fbethlipton%2Ftypes-of-apples%2F&psig=AOvVaw1QiHYj8WdzW_YZ5fWZqbPi&ust=1706085827142000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDghJKP84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 2,
+        "name": "Avocado",
+        "price": 2.99,
+        "imgName": "Avocado",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgwpriceltd.co.uk%2Fproduct%2Favocado%2F&psig=AOvVaw0iTsRcyfDWwwpdcXqA5oK7&ust=1706085852082000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKC_652P84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 3,
+        "name": "Banana",
+        "price": 1.70,
+        "imgName": "Banana",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.shutterstock.com%2Fsearch%2Fbanana&psig=AOvVaw1YF2X2iAq70kCFijsrzbPv&ust=1706085873841000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCODw8qqP84MDFQAAAAAdAAAAABAI"
+      },
+      {
+        "id": 4,
+        "name": "Mango",
+        "price": 1.22 ,
+        "imgName": "Mango",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fexoticfruitbox.com%2Fen%2Ftropical-fruits%2Fmangoes%2F&psig=AOvVaw1g1skL5d3XU04CViYe8oCe&ust=1706085909104000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLjyrbmP84MDFQAAAAAdAAAAABAD"
+      },
+      {
+        "id": 5,
+        "name": "Grape",
+        "price": 2.25,
+        "imgName": "Grape",
+        "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.thespruceeats.com%2Fwhat-are-grapes-5193263&psig=AOvVaw3C3G9EiFw3FNX3KO2M6Sp-&ust=1706085931348000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDizsKP84MDFQAAAAAdAAAAABAI"
+      }
+    ],
+    "milk": [
+        {
+          "id": 1,
+          "name": "Milk",
+          "price": 4.33,
+          "imgName": "Milk",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.heritagefoods.in%2Fblog%2Fdifferent-types-of-milk%2F&psig=AOvVaw16_dORMVZzPG3YxmOTbHNr&ust=1706085961264000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPCS4NGP84MDFQAAAAAdAAAAABAD"
+        },
+        {
+          "id": 2,
+          "name": "Cheese",
+          "price": 7.32,
+          "imgName": "Cheese",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.healthline.com%2Fnutrition%2Fhealthiest-cheese&psig=AOvVaw3Epuy3O53Rnt1fTbwf5L5s&ust=1706085991714000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLi9neCP84MDFQAAAAAdAAAAABAI"
+        },
+        {
+            "id": 3,
+            "name": "Cottage cheese",
+            "price": 3.78,
+            "imgName": "Cottage cheese",
+            "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.health.com%2Fcottage-cheese-7508035&psig=AOvVaw3Vhhiw1LfCa4SPSAT8g0d8&ust=1706086019895000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCLCgw-6P84MDFQAAAAAdAAAAABAD"
+        },
+        {
+            "id": 4,
+            "name": "Cream",
+            "price": 4.58,
+            "imgName": "Cream",
+            "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.biggerbolderbaking.com%2Fhow-to-make-sour-cream%2F&psig=AOvVaw1uuBknPjVdse6ZhtXunxVM&ust=1706086050502000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDel_uP84MDFQAAAAAdAAAAABAD"
+        },
+        {
+            "id": 5,
+            "name": "Butter",
+            "price": 5.93,
+            "imgName": "Butter",
+            "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphoto%2Fbutter-blocks-and-pieces-on-wooden-table-copy-space-gm1338222224-418877825&psig=AOvVaw1WVwfPKQCHKz8Me2tYQs7z&ust=1706086073039000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNDqwIaQ84MDFQAAAAAdAAAAABAD"
+        }
+    ],
+    "fish and seafood": [
+        {
+          "id": 1,
+          "name": "Lobster",
+          "price": 12.13,
+          "imgName": "Lobster",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fpinetreeseafood.com%2Fshop%2Flive-maine-lobster-3lb%2F&psig=AOvVaw0plwtDF4XyV1Uw7VAKKnJM&ust=1706086101747000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMD_8pSQ84MDFQAAAAAdAAAAABAD"
+        },
+        {
+          "id": 2,
+          "name": "Mussels",
+          "price": 4.85,
+          "imgName": "Mussels",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bonappetit.com%2Frecipe%2Fsteamed-mussels-with-fennel-and-tarragon&psig=AOvVaw3CZDf9O-TzymhT5Q-lvvv_&ust=1706086132092000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCMDxpqGQ84MDFQAAAAAdAAAAABAI"
+        },
+        {
+            "id": 3,
+            "name": "Snails",
+            "price": 10.17,
+            "imgName": "Snails",
+            "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foodandwine.com%2Fnews%2Fsnail-farms-united-states&psig=AOvVaw3GBbA4wo-Ww1PeiWVhoVUS&ust=1706086153545000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOjuwa6Q84MDFQAAAAAdAAAAABAD"
+        },
+        {
+            "id": 4,
+            "name": "Oysters",
+            "price": 8.26,
+            "imgName": "Oysters",
+            "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Foyster&psig=AOvVaw3atNw5C26i5StABgifPyxs&ust=1706086178523000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIiWy7iQ84MDFQAAAAAdAAAAABAD"
+        },
+        {
+          "id": 5,
+          "name": "Salmon",
+          "price": 11.92,
+          "imgName": "Salmon",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fgoodfishco.my%2Fproducts%2Fchilled-airflown-salmon-fillet&psig=AOvVaw0YfheBYtcRujNeGW84RfUy&ust=1706086209348000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCOiV4cmQ84MDFQAAAAAdAAAAABAR"
+        }
+    ],
+    "meat": [
+        {
+          "id": 1,
+          "name": "Beef",
+          "price": 7.07,
+          "imgName": "Beef",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.delish.com%2Fcooking%2Frecipe-ideas%2Fa23584914%2Fperfect-roast-beef-recipe%2F&psig=AOvVaw2GhIDmDnkdu1RDmK7fd1w1&ust=1706086265975000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCKDry4GR84MDFQAAAAAdAAAAABAI"
+        },
+        {
+          "id": 2,
+          "name": "Lamb",
+          "price": 20,
+          "imgName": "Lamb",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.istockphoto.com%2Fphotos%2Flamb-meat&psig=AOvVaw1bjDNhBfvEqfJJ5J-bt6fl&ust=1706086314915000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCPi_1_qQ84MDFQAAAAAdAAAAABAE"
+        },
+        {
+          "id": 3,
+          "name": "Pork",
+          "price": 0.92,
+          "imgName": "Pork",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.healthline.com%2Fnutrition%2Ffoods%2Fpork&psig=AOvVaw3VJjkdTNPOVQuni7f7phbI&ust=1706086352935000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJjEqoyR84MDFQAAAAAdAAAAABAD"
+        }
+    ],
+    "poultry": [
+        {
+          "id": 1,
+          "name": "Chicken",
+          "price": 3.32,
+          "imgName": "Chicken",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.epicurious.com%2Frecipes%2Ffood%2Fviews%2Fmy-favorite-simple-roast-chicken-231348&psig=AOvVaw3F-lcM1lCKRD90nPIOBbf1&ust=1706086374537000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJjZhZaR84MDFQAAAAAdAAAAABAR"
+        },
+        {
+          "id": 2,
+          "name": "Turkey",
+          "price": 2.36,
+          "imgName": "Turkey",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.allrecipes.com%2Frecipe%2F43655%2Fperfect-turkey%2F&psig=AOvVaw0bNXVNH4XBIsB9eDsOgRgG&ust=1706086398013000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCIj3vaGR84MDFQAAAAAdAAAAABAD"
+        },
+        {
+          "id": 3,
+          "name": "Duck",
+          "price": 4.41,
+          "imgName": "Duck",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.foodnetwork.com%2Frecipes%2Ffood-network-kitchen%2Froast-duck-recipe-2011613&psig=AOvVaw07zLuhmjQsCEu5WRzxQ4UA&ust=1706086426624000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCJCB9K6R84MDFQAAAAAdAAAAABAI"
+        },
+        {
+          "id": 4,
+          "name": "Goose",
+          "price": 5.53,
+          "imgName": "Goose",
+          "imgSrc": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ffoodwishes.blogspot.com%2F2011%2F12%2Fmy-goose-was-already-cooked.html&psig=AOvVaw1KBWcsO0C8loKYfcDuJaf9&ust=1706086458612000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNi2yMKR84MDFQAAAAAdAAAAABAI"
+        }
+    ]
+  }
