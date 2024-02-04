@@ -1,6 +1,5 @@
 import { Fragment, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
 
 import { Dialog, Popover, Transition } from '@headlessui/react';
 import { ChevronDownIcon } from '@heroicons/react/20/solid';
@@ -142,7 +141,6 @@ export default function Header() {
                   to="/login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
-                  Log in
                 </Link>
               </div>
             </div>
