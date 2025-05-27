@@ -22,7 +22,7 @@ import {
 const products = [
   { name: 'Vegetables', description: 'Cabbage, Potato, Cucumber, Tomato, Garlic, Onion', icon: vegetables },
   { name: 'Fruits', description: 'Apples, Avocados, Banana, Mango, Grapes ', icon: fruits },
-  { name: 'Milk', description: 'Milk, Cheese, Cottage cheese, Cream, Butter', icon: milk },
+  { name: 'Dairy Products', description: 'Milk, Cheese, Cottage cheese, Cream, Butter', icon: milk },
   { name: 'Seafood', description: 'Lobsters, Mussels, Snails, Oysters, Salmon', icon: fish },
   { name: 'Meat', description: 'Beef, Lamb, Pork', icon: meat },
   { name: 'Poultry', description: 'Chicken, Turkey, Duck, Goose', icon: poultry }
