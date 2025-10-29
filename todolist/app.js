@@ -5,116 +5,118 @@ const _ = require("lodash");
 
 const app = express();
 
-app.set('view engine', 'ejs');
-
-app.use(bodyParser.urlencoded({extended: true}));
+app.set("view engine", "ejs");
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://myDatabaseUser:D1fficultP%40ssw0rd@cluster0.example.mongodb.net/todolistDB");
+mongoose.connect(process.env.MONGODB_URI);
 
-const itemsSchema = {
-  name: String
-};
-
+const itemsSchema = { name: String };
 const Item = mongoose.model("Item", itemsSchema);
 
-
-const item1 = new Item({
-  name: "Walk the dogs"
-});
-
-const item2 = new Item({
-  name: "Buy milk"
-});
-
-const item3 = new Item({
-  name: "Watch movie"
-});
-
-
-const defaultItems = [item1, item2, item3];
-
-const listSchema = {
-  name: String,
-  items: [itemsSchema]
-};
-
+const listSchema = { name: String, items: [itemsSchema] };
 const List = mongoose.model("List", listSchema);
 
-app.route('/')
-  .get((req, res) => {
-    Item.find({})
-    .then((items) => {
-      if (items.length === 0) {
-        Item.insertMany(defaultItems);
-        res.redirect("/");
-      } else {
-        res.render("list", {listTitle: "Today", newListItems: items});
-      }
+const defaultItems = [
+  new Item({ name: "Walk the dogs" }),
+  new Item({ name: "Buy milk" }),
+  new Item({ name: "Watch movie" }),
+];
 
-      res.render("list", {listTitle: "Today", newListItems: items});
-    });
-  })
-  .post((req, res) => {
-    const listName = req.body.list;
-    const itemName = req.body.newItem;
-  
-    if(itemName.trim().length !== 0) {
-      const item = new Item({
-        name: itemName
-      });
-    
-      if (listName === "Today"){
-        item.save();
-        res.redirect("/");
-      } else {
-        List.findOne({name: listName})
-          .then((foundList) => {
-            foundList.items.push(item);
-            foundList.save();
-            res.redirect("/" + listName);
-          })
-      }
-    } else {
-      if (listName === "Today"){
-        res.redirect("/");
-      }
-      res.redirect("/" + listName);
+// --- Unified Home Route (/ and /today) ---
+app.get(["/", "/today"], async (req, res) => {
+  try {
+    const items = await Item.find({});
+    if (items.length === 0) {
+      await Item.insertMany(defaultItems);
+      return res.redirect("/");
     }
-
-  })
-
-
-app.get("/:customListName", function(req, res){
-  const customListName = _.capitalize(req.params.customListName);
-
-  List.findOne({name: customListName})
-    .then((foundList) => {
-      res.render("list", {listTitle: foundList.name, newListItems: foundList.items});
-    })
-    .catch(() => {
-      const list = new List({
-        name: customListName
-      });
-      list.save();
-      res.redirect("/" + customListName);
-    });
+    res.render("list", { listTitle: "Today", newListItems: items });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
 });
 
-app.post("/delete", function(req, res){
+// --- POST / (add new item) ---
+app.post("/", async (req, res) => {
+  const itemName = req.body.newItem.trim();
+  const listName = req.body.list;
+
+  if (!itemName) {
+    return res.redirect("/" + (listName === "Today" ? "" : listName));
+  }
+
+  const item = new Item({ name: itemName });
+
+  try {
+    if (listName === "Today") {
+      await item.save();
+      res.redirect("/");
+    } else {
+      let foundList = await List.findOne({ name: listName });
+      if (!foundList) {
+        foundList = new List({ name: listName, items: [item] });
+      } else {
+        foundList.items.push(item);
+      }
+      await foundList.save();
+      res.redirect("/" + listName);
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
+});
+
+// --- Dynamic Custom Lists (/Work, /Yesterday, etc.) ---
+app.get("/:customListName", async (req, res) => {
+  const customListName = _.capitalize(req.params.customListName);
+
+  // Redirect /today → /
+  if (customListName === "Today") {
+    return res.redirect("/");
+  }
+
+  try {
+    let foundList = await List.findOne({ name: customListName });
+    if (!foundList) {
+      foundList = new List({ name: customListName, items: defaultItems });
+      await foundList.save();
+      return res.redirect("/" + customListName);
+    }
+    res.render("list", {
+      listTitle: foundList.name,
+      newListItems: foundList.items,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
+});
+
+// --- Delete item ---
+app.post("/delete", async (req, res) => {
   const checkedItemId = req.body.checkbox;
   const listName = req.body.listName;
 
-  if (listName === "Today") {
-      Item.deleteOne({_id: checkedItemId}).then(() => {
-        res.redirect("/");
-      });
-  } else {
-    List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemId}}})
-      .then(() => {
-        res.redirect("/" + listName);
-      });
-  };
+  try {
+    if (listName === "Today") {
+      await Item.deleteOne({ _id: checkedItemId });
+      res.redirect("/");
+    } else {
+      await List.findOneAndUpdate(
+        { name: listName },
+        { $pull: { items: { _id: checkedItemId } } }
+      );
+      res.redirect("/" + listName);
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).send("Server Error");
+  }
 });
 
-app.listen(process.env.PORT || 5000);
+app.listen(process.env.PORT || 5000, () => {
+  console.log("✅ Server is running on port 5000");
+});

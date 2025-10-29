@@ -6,9 +6,9 @@ import pg from "pg";
 const app = express();
 
 const db = new pg.Client({
-  user: "db_edi8_user",
-  host: "dpg-clobdbap0o1s73f7ggq0-a",
-  database: "db_edi8",
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
   password: process.env.PASSWORD,
   port: 5432
 });

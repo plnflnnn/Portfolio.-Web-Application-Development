@@ -6,9 +6,9 @@ import pg from "pg";
 const app = express();
 
 const db = new pg.Client({
-  user: "postgres",
-  host: "database-1.cv0mhs1g9zgp.ap-northeast-2.rds.amazonaws.com",
-  database: "travelDB",
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
   password: process.env.PASSWORD,
   port: 5432,
   ssl: {
