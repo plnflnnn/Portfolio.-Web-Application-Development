@@ -25,7 +25,9 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session())
 
-mongoose.connect('mongodb+srv://myDatabaseUser:D1fficultP%40ssw0rd@cluster0.example.mongodb.net/userDB');
+mongoose.connect(process.env.MONGO_URI);
+
+const appUrl = process.env.APP_URL;
 
 const userSchema = new mongoose.Schema({
     username: String,
@@ -49,7 +51,7 @@ passport.serializeUser(function(user, cb) {
       });
     });
   });
-  
+
 passport.deserializeUser(function(user, cb) {
 process.nextTick(function() {
     return cb(null, user);
@@ -59,7 +61,7 @@ process.nextTick(function() {
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: 'https://secrets-app-6djr.onrender.com/auth/google/secrets'
+    callbackURL: `${appUrl}/auth/google/secrets`
   },
   function(accessToken, refreshToken, profile, cb) {
     User.findOrCreate({ googleId: profile.id, username: profile.id }, function (err, user) {
@@ -132,12 +134,12 @@ app.route('/reset')
             const user = await User.findOne({ username: email });
             if (user.username === email) {
                 const id = user.id;
-                const link = `https://secrets-app-6djr.onrender.com/reset/${id}`;
+                const link = `${appUrl}/reset/${id}`;
                 const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'plnflnnn@gmail.com',
-                    pass: 'password'
+                    user: process.env.EMAIL_ADDRESS,
+                    pass: process.env.EMAIL_PASSWORD
                 }
                 });
     
