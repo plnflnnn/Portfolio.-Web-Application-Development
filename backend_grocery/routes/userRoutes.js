@@ -10,11 +10,11 @@ router.post('/signup', async (req, res) => {
   const { userName, email, password } = req.body;
   try {
     const existing = await pool.query(
-      'SELECT id FROM users WHERE "userName" = $1 OR email = $2',
-      [userName, email]
+      'SELECT id FROM users WHERE email = $1',
+      [email]
     );
     if (existing.rows.length > 0)
-      return res.status(409).json({ error: 'Username or Email already taken' });
+      return res.status(409).json({ error: 'Email already taken' });
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const now = new Date();
@@ -45,8 +45,10 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ error: 'Invalid credentials' });
 
     const token = generateToken(user.id);
+
+    const { password: _, ...userSafe } = user;
     res.cookie('jwt', token, { httpOnly: true, maxAge: 86400000 });
-    res.status(200).json({ token, user });
+    res.status(200).json({ token, userSafe });
   } catch (err) {
     console.error('Login error:', err);
     res.status(500).json({ error: 'Login failed' });
